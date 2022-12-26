@@ -29,7 +29,7 @@ jobs:
           name: Install API Dependencies
           command: |
            echo "TODO: Install dependencies in the the backend API"
-            npm run backend:install
+            npm run api:install
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
@@ -57,7 +57,7 @@ jobs:
           name: API Build
           command: |
             echo "TODO: Build the backend API"
-            npm run backend:build
+            npm run api:build
   # deploy step will run only after manual approval
   deploy:
     docker:
