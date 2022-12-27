@@ -5,6 +5,11 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
+workflows:
+  test-env-vars:
+    jobs:
+      - build:
+          context: udagram
 jobs:
   build:
     docker:
@@ -49,11 +54,6 @@ jobs:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
     steps:
-      - run:
-          name: keys
-          command: |
-            echo $AWS_SECRET_ACCESS_KEY
-            echo $AWS_ACCESS_KEY_ID
       - node/install:
           node-version: '14.15' 
       - eb/setup
