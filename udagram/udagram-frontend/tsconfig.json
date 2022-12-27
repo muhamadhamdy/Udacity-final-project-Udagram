@@ -4,8 +4,8 @@
     "disableTypeScriptVersionCheck": true
   },
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    //"forceConsistentCasingInFileNames": true,
+    //
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
