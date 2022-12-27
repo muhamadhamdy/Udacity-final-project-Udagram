@@ -80,7 +80,7 @@ workflows:
           requires:
             - build
       - deploy:
-          context: udagram
+          
           requires:
             - hold
       
