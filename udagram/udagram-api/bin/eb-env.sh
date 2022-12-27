@@ -1,4 +1,4 @@
-eb open m-hamdy-udagram --profile default
+eb open udagram-m-hamdy --profile default
 eb setenv POSTGRES_USERNAME=postgres
 eb setenv POSTGRES_PASSWORD=postgre2022
 eb setenv POSTGRES_DB=ebdb
