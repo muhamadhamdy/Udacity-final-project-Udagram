@@ -48,17 +48,11 @@ jobs:
     docker:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
-    steps: 
-      - run:
-        command: |
-          rvm install 2.3.3
-          sudo pip install -U pip setuptools
-          sudo apt-get install python-dev
-          sudo pip install awsebcli
+    steps:
       - node/install:
-        node-version: '14.15'
-      #- eb/setup
-      #- aws-cli/setup
+          node-version: '14.15' 
+      - eb/setup
+      - aws-cli/setup
       - checkout
       # TODO: Install, build, deploy in both apps
       - run:
