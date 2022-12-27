@@ -51,9 +51,9 @@ Before starting to work on automation process, insure that the frontend and back
 1. test CircleCI config.yml code to insure its validity.
 2. config.yml file start with installation of project dependencies python,node, AWS CLI and EB CLI
 3. install dependencies for frontend with `npm run frontend:install`
-4. install dependencies for backend with `npm run backend:install`
+4. install dependencies for backend with `npm run api:install`
 5. build frontend app with `npm run frontend:build`
-6. install backend api with `npm run backend:build`
+6. install backend api with `npm run api:build`
 after succefully installation and build process complete the deploy process start
 7. deploy environment variables to beanstalk application with executing  `bash udagram/udagram-api/bin/eb-env-sh`
 8. finally deploying both applications with `npm run deploy`, this command will deploy frontend to S3 bucket and backend to EC2 instance. 
@@ -67,7 +67,7 @@ Here in the orb we stated that we will need node version 5.0.2, elastic-beanstal
 
 ### Build job
 
-In the build job we are using the docker image created by circlec, for the steps we are installing node version 14.15 then downloading the code from our github repository using the checkout command, then we are installing the dependencies for the frontend using the commane ` npm run frontend:install `, then we are doing the same for the backend using the command  ` npm run api:install ` then we are linting the frontend using the root level package.json with the command `npm run frontend:lint`, finally we are building the frontend and the backend using the commands `npm run frontend:build` and `npm run backend:build` respectively.
+In the build job we are using the docker image created by circlec, for the steps we are installing node version 14.15 then downloading the code from our github repository using the checkout command, then we are installing the dependencies for the frontend using the commane ` npm run frontend:install `, then we are doing the same for the backend using the command  ` npm run api:install ` then we are linting the frontend using the root level package.json with the command `npm run frontend:lint`, finally we are building the frontend and the backend using the commands `npm run frontend:build` and `npm run api:build` respectively.
 
 ### Deploy job
 
