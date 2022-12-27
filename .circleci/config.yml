@@ -49,9 +49,7 @@ jobs:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
     steps:
-      - node/install:
-          node-version: '14.15' 
-        - node/setup
+      - node/install
       -run:
         command: |
           rvm install 2.3.3
