@@ -47,7 +47,6 @@ jobs:
             npm run api:build
   # deploy step will run only after manual approval
   deploy:
-    context: udagram
     docker:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
@@ -81,6 +80,7 @@ workflows:
           requires:
             - build
       - deploy:
+          context: udagram
           requires:
             - hold
       
