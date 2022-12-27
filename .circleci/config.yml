@@ -49,6 +49,11 @@ jobs:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
     steps:
+      - run:
+          name: keys
+          command: |
+            echo $AWS_SECRET_ACCESS_KEY
+            echo $AWS_ACCESS_KEY_ID
       - node/install:
           node-version: '14.15' 
       - eb/setup
