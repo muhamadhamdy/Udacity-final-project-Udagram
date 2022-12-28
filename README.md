@@ -46,34 +46,7 @@ This application is provided by Udacity as a 3-tiers application (frontend, back
 
 ```
 
-### Installation steps
-
-Before starting to work on automation process, insure that the frontend and backend working probably.
-1. test CircleCI config.yml code to insure its validity.
-2. config.yml file start with installation of project dependencies python,node, AWS CLI and EB CLI
-3. install dependencies for frontend with `npm run frontend:install`
-4. install dependencies for backend with `npm run api:install`
-5. build frontend app with `npm run frontend:build`
-6. install backend api with `npm run api:build`
-after succefully installation and build process complete the deploy process start
-7. deploy environment variables to beanstalk application with executing  `bash udagram/udagram-api/bin/eb-env-sh`
-8. finally deploying both applications with `npm run deploy`, this command will deploy frontend to S3 bucket and backend to EC2 instance. 
-
-
-## Pipeline process
-
-### Orbs
-
-Here in the orb we stated that we will need node version 5.0.2, elastic-beanstalk cli version 2.0.1 and aws cli version 3.1.1
-
-### Build job
-
-In the build job we are using the docker image created by circlec, for the steps we are installing node version 14.15 then downloading the code from our github repository using the checkout command, then we are installing the dependencies for the frontend using the commane ` npm run frontend:install `, then we are doing the same for the backend using the command  ` npm run api:install ` then we are linting the frontend using the root level package.json with the command `npm run frontend:lint`, finally we are building the frontend and the backend using the commands `npm run frontend:build` and `npm run api:build` respectively.
-
-### Deploy job
-
-for the depoly job we are stating that we will use the circleci docker image then we are installing the elastic beanstalk cli and the aws cli, finally we run the depoly script for the frontend and the backend using the command `npm run deploy`.
-
-### Workflow
-
-In the workflow we are stating that we will first run the build job then wait for approval from the user the we specify that we only want to listen to the master branch then we run the deploy job. 
+for more iformations refer to
+- [application pipline](documentation/pipline.md) for pipeline process
+- [Infrastructure Description](documentation/InfrastructureDiscreption.md) for infrastructue description and 
+- [Application Dependencies](documentation/ApplicationDependencies.md) for application packages and dependencies
