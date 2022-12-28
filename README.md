@@ -47,6 +47,6 @@ This application is provided by Udacity as a 3-tiers application (frontend, back
 ```
 
 for more iformations refer to
-- [application pipline](/documentation/pipline.md) for pipeline process
-- [Infrastructure Description](/documentation/InfrastructureDiscreption.md) for infrastructue description and 
-- [Application Dependencies](/documentation/ApplicationDependencies.md) for application packages and dependencies
+- [application pipline](https://github.com/muhamadhamdy/Udacity-final-project-Udagram/blob/main/Documentation/pipline.md) for pipeline process
+- [Infrastructure Description](https://github.com/muhamadhamdy/Udacity-final-project-Udagram/blob/main/Documentation/InfrastructureDiscreption.md) for infrastructue description and 
+- [Application Dependencies](https://github.com/muhamadhamdy/Udacity-final-project-Udagram/blob/main/Documentation/ApplicationDependencies.md) for application packages and dependencies
