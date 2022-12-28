@@ -4,6 +4,9 @@
 Before starting to work on automation process, insure that the frontend and backend working probably.
 Test CircleCI config.yml code to insure its validity.
 
+<img src="pipeline-diagram.jpeg" alt="Udagram CircleCI pipeline" title="Udagram CircleCI pipeline">
+
+
 ### Orbs
 
 Here in the orb we stated that we will need node version 5.0.2, elastic-beanstalk cli version 2.0.1 and aws cli version 3.1.1
