@@ -4,6 +4,7 @@
 
 ---
 
+
 The purpose of this project to demonstrate how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. We used AWS console to start and configure the services the application needs such as elastic beanstack, RDS postgres database and S3 buckets to store product information and a web server allowing the site to be discovered by potential customers.
 
 
